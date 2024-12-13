@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AZ Motor Spare</title>
+    <!-- Link To CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="clickboard.css">
+    <!-- Box Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .dropdown {
+          position: relative;
+          display: inline-block;
+      }
+
+      .dropdown-content {
+          display: none;
+          position: absolute
+          padding: 10px;
+          border: 1px solid #ddd;
+          z-index: 1;
+          min-width: 250px;
+      }
+
+      .dropdown-content p {
+          margin: 10px 0;
+          font-size: 14px;
+      }
+
+      .dropdown button {
+          padding: 10px 15px;
+          background-color: #02ac70;
+          color: #02ac70;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      .dropdown button:hover {
+          background-color: #02ac70;
+      }
+  </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <!-- Nav -->
+      <div class="nav container">
+        <!-- Logo -->
+        <a href="#" class="logo">AZ Motor Spare</a>
+        <!-- Cart Icon -->
+        <i class="bx bx-shopping-bag" id="cart-icon" data-quantity="0"></i>
+        <!-- cart -->
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
+          <!-- Content -->
+          <div class="cart-content"></div>
+          <!-- Total -->
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">MVR0</div>
+          </div>
+          <!-- Buy Button -->
+          <button type="button" class="btn-buy">Pay Now</button>
+          <div class="button">
+            <button onclick="toggleDropdown()">Show Bank Account Info</button>
+            <div class="dropdown-content" id="bankInfo">
+                <p><strong>Account Name:</strong> LAST HUNT</p>
+                <p><strong>Account Number:</strong></p>
+                <div class="container">
+                  <div class="number-box">
+                    <span id="number">7730000345836</span>
+                    <button id="copy-btn">Copy</button>
+                  </div>
+                  <p id="message" class="hidden">Number copied to clipboard!</p>
+                  <p><strong>Bank:</strong> BML</p>
+                </div> 
+        </div>
+          <!-- Close Cart -->
+          <i class="bx bx-x" id="close-cart"></i>
+        </div>
+      </div>
+    </header>
+    <!-- Products -->
+    <section class="shop container">
+      <h2 class="section-title">Shop Products</h2>
+      <!-- Shop Content -->
+      <div class="shop-content">
+        <!-- Box 1 -->
+        <div class="product-box">
+          <div class="new-arrival">New Arrival</div>
+          <img
+            src="./img/unikcloset/AlloyBarBlack.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Men's Beach Pants</h2>
+          <span class="price">MVR240</span>
+          <span class="original-price">MVR300</span>
+          <span class="discount">20% off</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Box 2 -->
+        <div class="product-box">
+          <div class="new-arrival">New Arrival</div>
+          <img
+            src="../public/img/unikcloset/AlloyBarRed.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Men's Elastic Surfing Beach Pants</h2>
+          <span class="price">MVR240</span>
+          <span class="original-price">MVR300</span>
+          <span class="discount">20% off</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Box 3 -->
+        <div class="product-box">
+          <div class="new-arrival">Out Of Stock</div>
+          <img
+            src="../public/img/unikcloset//GN125DigitalMeter.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Men's Plain Waffle T-Shirt</h2>
+          <span class="price">MVR300</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Box 4 -->
+        <div class="product-box">
+          <div class="new-arrival">Out Of Stock</div>
+          <img
+            src="../public/img/unikcloset/GN125TwinTailLight.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Men's Plain Waffle T-Shirt</h2>
+          <span class="price">MVR300</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Box 5 -->
+        <div class="product-box">
+          <img
+            src="../public/img/unikcloset/HondaAirbladeMirrorBlack.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Men's Plain Waffle T-Shirt</h2>
+          <span class="price">MVR300</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Box 6 -->
+        <div class="product-box">
+          <img
+            src="../public/img/unikcloset/HondaAirbladeMirrorCarbon.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Slipper New Style</h2>
+          <span class="price">MVR250</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Box 7 -->
+        <div class="product-box">
+          <img
+            src="../public/img/unikcloset/MotorcycleSideMirrorBlack.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Slipper New Style</h2>
+          <span class="price">MVR250</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+        <!-- Box 8 -->
+        <div class="product-box">
+          <img
+            src="../public/img/unikcloset/MotorcycleSideMirrorRed.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Rain Coat Waterproof - Women's</h2>
+          <span class="price">MVR280</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+         <!-- Box 9 -->
+         <div class="product-box">
+          <img
+            src="..//public/img/unikcloset/SideMirrorRectangleBlack.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Rain Coat&Pant Waterproof - Men's</h2>
+          <span class="price">MVR280</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        </div>
+      </div>
+    </section>
+    <script>
+      function toggleDropdown() {
+          const dropdownContent = document.getElementById('bankInfo');
+          if (dropdownContent.style.display === 'block') {
+              dropdownContent.style.display = 'none';
+          } else {
+              dropdownContent.style.display = 'block';
+          }
+      }
+  </script>
+
+
+    <!-- Link To JS -->
+    <script src="js/main.js"></script>
+    <script src="apps.js"></script>
+  </body>
+</html>

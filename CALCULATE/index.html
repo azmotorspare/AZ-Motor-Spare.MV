@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="Style.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+        <title>AZ Motor Spare</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="clickboard.css">
+
+    </head>
+    
+    <body>
+        <div class="header">
+            <p class="logo">AZ MOTOR SPARE</p>
+            
+            <div class="cart"><i class="fa-solid fa-cart-shopping"></i><p id="count">0</p></div>
+        </div>
+        <div class="container">
+            <div id="root"></div>
+            <div class="sidebar">
+                <div class="head"><p>My Cart</p></div>
+                <div id="cartItem">Your cart is empty</div>
+                <div class="foot">
+                    <h3>Total</h3>
+                    <h2 id="total">MVR 0.00</h2>
+                </div>
+                <div class="button">
+                    <button onclick="toggleDropdown()">Pay Now</button>
+                    <div class="dropdown-content" id="bankInfo">
+                        <p><strong>Account Name:</strong> LAST HUNT</p>
+                        <div class="container">
+                          <div class="number-box">
+                            <span id="number">7730000345836</span>
+                            <button id="copy-btn">Copy</button>
+                          </div>
+                          <p id="message" class="hidden">Number copied to clipboard!</p>
+                          <p><strong>Bank:</strong> BML</p>
+                        </div> 
+            </div>
+        </div>
+        <script>
+            function toggleDropdown() {
+                const dropdownContent = document.getElementById('bankInfo');
+                if (dropdownContent.style.display === 'block') {
+                    dropdownContent.style.display = 'none';
+                } else {
+                    dropdownContent.style.display = 'block';
+                }
+            }
+        </script>
+        
+        <script src="script.js"></script>
+        <script src="apps.js"></script>
+
+    </body>
+</html>

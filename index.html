@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AZ Motor Spare</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        footer {
+            background-color: #222020;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        .footer-container h4 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .footer-container p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .footer-container a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+        .footer-container a:hover {
+            text-decoration: underline;
+        }
+        .copyright {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #ccc;
+        }
+        .dropdown {
+          position: relative;
+          display: inline-block;
+      }
+
+      .dropdown-content {
+          display: none;
+          position: absolute
+          padding: 10px;
+          border: 1px solid #ddd;
+          z-index: 1;
+          min-width: 250px;
+      }
+
+      .dropdown-content p {
+          margin: 10px 0;
+          font-size: 14px;
+      }
+
+      .dropdown button {
+          padding: 10px 15px;
+          background-color: #02ac70;
+          color: #02ac70;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      .dropdown button:hover {
+          background-color: #02ac70;
+      }
+    </style>
+</head>
+<body>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="">AZ</i>
+                    <div class="logo-text">MOTOR SPARE</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ui class="navlinks">
+                        <li><a href="./public/shop.html">Shop</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Stock</a></li>
+                        
+
+
+                    </ui>
+                    
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="AZ.png" alt="" srcset="profile pic">
+                </div>
+                <div class="hero-text">
+                    <h5><span class="input">AZ MOTOR SPARE</span></h5>
+                    
+                    <p>
+                       We are offer high quantity automotive spare parts, at affordable rates here in Maldives.
+                    </p>
+                    <div class="btn-group">
+                        <a href="./CALCULATE/index.html" class="btn active">Calculate</a>
+                        <a href="#" class="btn">About</a>
+                    </div>
+                    <div class="social">
+                        <a href="https://www.facebook.com/azmotorspare"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/az_motorspare.mv?igsh=YzQxa2o3MjI4MWRz&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://t.me/SP0639"><i class="fa-brands fa-telegram"></i></a>
+                        <a href="https://wa.me/9607705120"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                    <footer>
+                        <div class="footer-container">
+                            <h4>Business Address</h4>
+                            <p>Aavina | F.Feeali | Maldives</p>
+                
+                            <h4>Phone Number</h4>
+                            <p><a href="tel:+9609131220">+9609131220</a></p>
+                            <p><a href="tel:+9609408104">+9609408104</a></p>
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:azmotorsparemv@gmail.com">azmotorsparemv@gmail.com</a></p>
+                
+                            <div class="copyright">
+                                &copy; 2024 AZ Motor Spare. All rights reserved.
+                            </div>
+                        </div>
+                    </footer>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.js"></script>
+<script>
+  var togglebtn=document.querySelector(".togglebtn");
+  var nav=document.querySelector(".navlinks");
+  var links=document.querySelector(".navlinks li");
+
+  togglebtn.addEventListener("click", function(){
+    this.classList.toggle("click");
+    nav.classList.toggle("open");
+  })
+
+
+  var typed=new Typed(".input",{
+    strings:["Frontend Developer","AZ MOTOR SPARE","AZ MOTOR SPARE"],
+    typedSpeed:70,
+    backSpeed:45,
+    loop:true
+  })
+</script>
+<script>
+    function toggleDropdown() {
+        const dropdownContent = document.getElementById('bankInfo');
+        if (dropdownContent.style.display === 'block') {
+            dropdownContent.style.display = 'none';
+        } else {
+            dropdownContent.style.display = 'block';
+        }
+    }
+</script>
+
+
+</body>
+</html>
